@@ -1,0 +1,320 @@
+#column1 {
+  padding: 0 10px;
+  width: 45%;
+  float: left;
+}
+
+#column2 {
+  width: 50%;
+  float: left;
+}
+
+.twentytwenty-wrapper {
+  margin: 10px 0;
+}
+
+/* The size of the cake pictures */
+.twentytwenty-horizontal {
+  height: 710px;
+  width: 488px;
+}
+
+/* The size of the cat pictures */
+.twentytwenty-vertical {
+  height: 600px;
+  width: 392px;
+}
+
+/* The start of TwentyTwenty's CSS */
+/* This adds the bar separating the two sides of the picture */
+.twentytwenty-horizontal .twentytwenty-handle:before,
+.twentytwenty-horizontal .twentytwenty-handle:after,
+.twentytwenty-vertical .twentytwenty-handle:before,
+.twentytwenty-vertical .twentytwenty-handle:after {
+  content: " ";
+  display: block;
+  background: white;
+  position: absolute;
+  z-index: 30;
+  -webkit-box-shadow: 0px 0px 12px rgba(51, 51, 51, 0.5);
+  -moz-box-shadow: 0px 0px 12px rgba(51, 51, 51, 0.5);
+  box-shadow: 0px 0px 12px rgba(51, 51, 51, 0.5); }
+
+.twentytwenty-horizontal .twentytwenty-handle:before,
+.twentytwenty-horizontal .twentytwenty-handle:after {
+  width: 3px;
+  height: 9999px;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+.twentytwenty-vertical .twentytwenty-handle:before,
+.twentytwenty-vertical .twentytwenty-handle:after {
+  width: 150px;
+  height: 3px;
+  top: 50%;
+  margin-top: -1.5px;
+}
+
+/*  This adds in the before/after labels */
+.twentytwenty-before-label,
+.twentytwenty-after-label,
+.twentytwenty-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Settings for the transition when you hover over the picture */
+.twentytwenty-before-label,
+.twentytwenty-after-label,
+.twentytwenty-overlay {
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.twentytwenty-before-label,
+.twentytwenty-after-label {
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  transition-property: opacity;
+}
+
+/* The font style of the before/after labels */
+.twentytwenty-before-label:before,
+.twentytwenty-after-label:before {
+  color: white;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+
+/* This is the box around the before/after labels */
+.twentytwenty-before-label:before,
+.twentytwenty-after-label:before {
+  font-family: courier;
+  position: absolute;
+  background: rgba(255, 255, 200, 0.2);
+  line-height: 38px;
+  padding: 0 20px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 5px;
+}
+
+/* These two are the location of the before/after labels */
+.twentytwenty-horizontal .twentytwenty-before-label:before,
+.twentytwenty-horizontal .twentytwenty-after-label:before {
+  top: 10%;
+  margin-top: -19px;
+}
+
+.twentytwenty-vertical .twentytwenty-before-label:before,
+.twentytwenty-vertical .twentytwenty-after-label:before {
+  left: 5%;
+  margin-left: -25px;
+  text-align: center;
+  width: 90px;
+}
+
+/* This changes the position and size of the arrows */
+.twentytwenty-left-arrow,
+.twentytwenty-right-arrow,
+.twentytwenty-up-arrow,
+.twentytwenty-down-arrow {
+  width: 0;
+  height: 0;
+  border: 6px inset transparent;
+  position: absolute;
+}
+
+/* These two put the arrows in the middle of the handle box */
+.twentytwenty-left-arrow,
+.twentytwenty-right-arrow {
+  top: 50%;
+  margin-top: -6px;
+}
+
+.twentytwenty-up-arrow,
+.twentytwenty-down-arrow {
+  left: 50%;
+  margin-left: -6px;
+}
+
+/* This sets the bounds of the plugin to be the picture's bounds */
+.twentytwenty-container {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  z-index: 0;
+  overflow: hidden;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* This enables the pictures to transition when you move the handle */
+.twentytwenty-container img {
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  display: block;
+}
+
+/* Keeps the picture from dimming when moving the handle */
+.twentytwenty-container.active .twentytwenty-overlay,
+.twentytwenty-container.active :hover.twentytwenty-overlay {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Don't show the before/after labels when moving the handle */
+.twentytwenty-container.active .twentytwenty-overlay .twentytwenty-before-label,
+.twentytwenty-container.active .twentytwenty-overlay .twentytwenty-after-label,
+.twentytwenty-container.active :hover.twentytwenty-overlay .twentytwenty-before-label,
+.twentytwenty-container.active :hover.twentytwenty-overlay .twentytwenty-after-label {
+  opacity: 0;
+}
+
+/* */
+.twentytwenty-container * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* These seven are before/after label initializers */
+.twentytwenty-before-label,
+.twentytwenty-after-label {
+  opacity: 0;
+}
+
+.twentytwenty-before-label:before {
+  content: attr(data-content);
+}
+
+.twentytwenty-after-label:before {
+  content: attr(data-content);
+}
+
+.twentytwenty-horizontal .twentytwenty-before-label:before {
+  left: 10px;
+}
+
+.twentytwenty-horizontal .twentytwenty-after-label:before {
+  right: 10px;
+}
+
+.twentytwenty-vertical .twentytwenty-before-label:before {
+  top: 10px;
+}
+
+.twentytwenty-vertical .twentytwenty-after-label:before {
+  bottom: 0;
+}
+
+/* When you hover over the picture, this sets the background to which you dim the picture */
+.twentytwenty-overlay {
+  -webkit-transition-property: background;
+  -moz-transition-property: background;
+  transition-property: background;
+  background: rgba(0, 0, 0, 0);
+  z-index: 25;
+}
+
+/* Dim the picture when you hover over it */
+.twentytwenty-overlay:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Show the before/after labels when you hover over the picture */
+.twentytwenty-overlay:hover .twentytwenty-after-label {
+  opacity: 1;
+}
+
+.twentytwenty-overlay:hover .twentytwenty-before-label {
+  opacity: 1;
+}
+
+.twentytwenty-before {
+  z-index: 20;
+}
+
+.twentytwenty-after {
+  z-index: 10;
+}
+
+/* The handle's style */
+.twentytwenty-handle {
+  background-color: #000000a0;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -18px;
+  margin-top: -18px;
+  border: 2px solid white;
+  border-radius: 10px;
+  z-index: 40;
+  cursor: pointer;
+}
+
+.twentytwenty-vertical .twentytwenty-handle {
+  border-radius: 1000px;
+}
+
+/* These four are used for the bar separating the pictures */
+.twentytwenty-horizontal .twentytwenty-handle:before {
+  bottom: 50%;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0 3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+  -moz-box-shadow: 0 3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+  box-shadow: 0 3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+}
+
+.twentytwenty-horizontal .twentytwenty-handle:after {
+  top: 50%;
+  margin-top: 20px;
+  -webkit-box-shadow: 0 -3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+  -moz-box-shadow: 0 -3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+  box-shadow: 0 -3px 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+}
+
+.twentytwenty-vertical .twentytwenty-handle:before {
+  left: 50%;
+  margin-left: 25px;
+  -webkit-box-shadow: 3px 0 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+  -moz-box-shadow: 3px 0 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+  box-shadow: 3px 0 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+}
+
+.twentytwenty-vertical .twentytwenty-handle:after {
+  right: 50%;
+  margin-right: 25px;
+  -webkit-box-shadow: -3px 0 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+  -moz-box-shadow: -3px 0 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+  box-shadow: -3px 0 0 white, 0px 0px 12px rgba(51, 51, 51, 0.5);
+}
+
+/* The arrows' styles */
+.twentytwenty-left-arrow {
+  border-right: 8px solid white;
+  left: 50%;
+  margin-left: -17px;
+}
+
+.twentytwenty-right-arrow {
+  border-left: 8px solid white;
+  right: 50%;
+  margin-right: -17px;
+}
+
+.twentytwenty-up-arrow {
+  display: none;
+}
+
+.twentytwenty-down-arrow {
+  display: none;
+}

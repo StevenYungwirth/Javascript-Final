@@ -1,0 +1,86 @@
+fieldset {
+  border-bottom: none;
+  margin-bottom: 7px;
+}
+
+.textlabels {
+  font-size: 1.2em;
+}
+
+#texts label {
+  display: inline-block;
+  width: 150px;
+}
+
+input[name=book] {
+  width: 220px;
+}
+
+#radiocontainer {
+  width: 70%;
+}
+
+#radios label {
+  float: left;
+  width: 33%;
+  text-align: center;
+}
+
+#radios input {
+  float: left;
+  margin: 0 15.3%;
+}
+
+select {
+  margin: 3px 0 10px 20px;
+  width: 100px;
+}
+
+.halfchecks {
+  float: left;
+  width: 10%;
+}
+
+.halfchecks label {
+  display: inline-block;
+}
+
+.halfchecks p {
+  margin: 3px;
+}
+
+textarea {
+  margin-top: 5px;
+  padding: 10px;
+}
+
+input[type=submit] {
+  font-size: 1.5em;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+#texts .error {
+  display: block;
+  width: 100%;
+}
+
+#radios .error {
+  display: block;
+  width: 100%;
+}
+
+#halfchecks label {
+  display: inline-block;
+}
+
+#instruments .error {
+  display: inline-block;
+  width: 100%;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  margin-top: 5px;
+}

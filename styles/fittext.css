@@ -1,0 +1,27 @@
+#fitSlider {
+  -webkit-appearance: none;
+  width: 200px;
+  height: 5px;
+  background: #000000;
+  margin-top: 15px;
+}
+
+#fitSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 20px;
+  background: #999999;
+}
+
+#fitSlider::-moz-range-thumb {
+  width: 10px;
+  height: 20px;
+  border-radius: 50%;
+  background: #999999;
+}
+
+#slideValue {
+  width: 200px;
+  text-align: center;
+}

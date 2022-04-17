@@ -1,0 +1,75 @@
+{
+  "nav": [
+    {
+      "href": "documentation.html",
+      "text": "Documentation"
+    },
+    {
+      "href": "validate.html",
+      "text": "Validation"
+    },
+    {
+      "href": "fittext.html",
+      "text": "FitText"
+    },
+    {
+      "href": "twentytwenty.html",
+      "text": "TwentyTwenty"
+    },
+    {
+      "href": "tabs.html",
+      "text": "Tabs"
+    },
+    {
+      "href": "json.html",
+      "text": "JSON"
+    },
+    {
+      "href": "ajax.html",
+      "text": "AJAX"
+    },
+    {
+      "href": "https://syungwirth.bitweb1.nwtc.edu/javascript/final-project/map.html",
+      "text": "Map"
+    }
+  ],
+
+  "content": [
+    {
+      "tagStart": "<h1>",
+      "sentence": "JSON Page",
+      "tagEnd": "</h1>"
+    },
+    {
+      "tagStart": "<p>",
+      "sentence": "All of the content you see for this page was loaded using JSON. ",
+      "tagEnd": ""
+    },
+    {
+      "tagStart": "",
+      "sentence": "The navigation bar, header, footer, and the text you're reading right now was all loaded in separately. ",
+      "tagEnd": "</p>"
+    },
+    {
+      "tagStart": "<p>",
+      "sentence": "Loading content this way could be helpful for the navigation bar, since loading it from a JSON file makes so there's only one location you have to change if you need to change the navigation bar, rather than changing it on every page of the site. ",
+      "tagEnd": ""
+    },
+    {
+      "tagStart": "",
+      "sentence": "The problem comes in if a user of the website has Javascript disabled, since wherever you loaded content in with JSON, nothing would appear.",
+      "tagEnd": "</p>"
+    }
+  ],
+
+  "footer": [
+    {
+      "href": "https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsyungwirth.bitweb1.nwtc.edu%2Fjavascript%2Ffinal-project%2Fjson.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en",
+      "text": "CSS Validation Results"
+    },
+    {
+      "href": "https://validator.w3.org/nu/?doc=https%3A%2F%2Fsyungwirth.bitweb1.nwtc.edu%2Fjavascript%2Ffinal-project%2Fjson.html",
+      "text": "HTML Validation Results"
+    }
+  ]
+}

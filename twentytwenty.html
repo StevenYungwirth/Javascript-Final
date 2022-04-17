@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>TwentyTwenty Plugin</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/twentytwenty.css">
+  </head>
+  <body>
+    <div class="enablejs">Please enable Javascript in order to use this site</div>
+    <nav>
+      <a href="documentation.html">Documentation</a>
+      <a href="validate.html">Validation</a>
+      <a href="fittext.html">FitText</a>
+      <a href="twentytwenty.html">TwentyTwenty</a>
+      <a href="tabs.html">Tabs</a>
+      <a href="json.html">JSON</a>
+      <a href="ajax.html">AJAX</a>
+      <a href="https://syungwirth.bitweb1.nwtc.edu/javascript/final-project/map.html">Map</a>
+    </nav>
+    <div id="content">
+      <main>
+        <h1>TwentyTwenty Plugin</h1>
+
+        <div id="column1">
+          <p>
+            The <a href="https://zurb.com/playground/twentytwenty">TwentyTwenty plugin</a> lets you have two pictures overlap each other and then have a moving handle to transition from one picture to the other.
+            The plugin makes this possible by adjusting the image's clip property when the handle moves.
+          </p>
+          <p>
+            Once you call the TwentyTwenty method on the container with your two pictures, everything else is done with CSS.
+            If you don't have any styling, then once you call the method you will simply have the two pictures next to each other, as if nothing is different.
+            Because of this, the styling from TwentyTwenty has been adapted for this page, with comments added in the CSS indicating which block of code handles which component.
+          </p>
+        </div>
+
+        <div id="column2">
+          <div class="container" id="cake">
+            <img src="assets/cake1.jpg" alt="Unlit cake">
+            <img src="assets/cake2.jpg" alt="Lit cake">
+          </div>
+
+          <div class="container" id="cat" data-orientation="vertical">
+            <img src="assets/cat2.jpg" alt="Sleepy cat">
+            <img src="assets/cat1.jpg" alt="Yawning cat">
+          </div>
+        </div>
+
+        <footer>
+          <p>
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsyungwirth.bitweb1.nwtc.edu%2Fjavascript%2Ffinal-project%2Ftwentytwenty.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">CSS Validation Results</a>
+            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fsyungwirth.bitweb1.nwtc.edu%2Fjavascript%2Ffinal-project%2Ftwentytwenty.html">HTML Validation Results</a>
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      window.jQuery || document.write('<script src="jsfiles/plugins/jquery-3.4.1.min.js"><\/script>')
+    </script>
+    <script src="jsfiles/plugins/jquery.event.move.js"></script>
+    <script src="jsfiles/plugins/jquery.twentytwenty.js"></script>
+    <script src="jsfiles/twentytwenty.js"></script>
+    <script src="jsfiles/no-js.js"></script>
+    <script src="jsfiles/log.js"></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+#tabs {
+  width: 700px;
+}
+
+#tabList li {
+  display: inline-block;
+  list-style-type: none;
+  background-color: #4a3523;
+  padding: 8px 0;
+  margin: 0;
+}
+
+#tabList li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 20px;
+}
+
+#tabList .activeTab {
+  background-color: #c28f64;
+}
+
+#tabList .activeTab a {
+  color: black;
+}
+
+#tabList li a:hover {
+  color: white;
+  background-color: #00000000;
+}
+
+#tabList .activeTab a:hover {
+  color: black;
+}
+
+.tabContent {
+  display: none;
+  min-height: 100px;
+}
+
+.tabContent.activeTab {
+  display: block;
+  background-color: #ffd9ba;
+  border: 10px solid #c28f64;
+  padding: 0 10px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>FitText Plugin</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/fittext.css">
+  </head>
+  <body>
+    <div class="enablejs">Please enable Javascript in order to use this site</div>
+    <nav>
+      <a href="documentation.html">Documentation</a>
+      <a href="validate.html">Validation</a>
+      <a href="fittext.html">FitText</a>
+      <a href="twentytwenty.html">TwentyTwenty</a>
+      <a href="tabs.html">Tabs</a>
+      <a href="json.html">JSON</a>
+      <a href="ajax.html">AJAX</a>
+      <a href="https://syungwirth.bitweb1.nwtc.edu/javascript/final-project/map.html">Map</a>
+    </nav>
+    <div id="content">
+      <main>
+        <h1 id="example">FitText Plugin</h1>
+        <p>The <a href="http://fittextjs.com/">FitText plugin</a> is used for making responsive designs easier.
+        Once it is called on an element, it automatically resizes the element's text based on the window's width.
+        The default font size is 1/10th of the window width, but there is also a compresser parameter you can pass in to change this.</p>
+        <p>The header text above will change dynamically as the window width changes.
+        The slider below can do this instead by changing FitText's compresser value. By default it is set to 1.
+        For this page, however, the default is set to 2.
+        Since this value is compressing the text, a higher value will give smaller text and a smaller value will give larger text.</p>
+
+        <label for="fitSlider">Change the size of the header text</label><br>
+        <input type="range" min="0.5" max="3.5" value="2" step="0.1" id="fitSlider" name="fitSlider">
+        <p id="slideValue">Compresser value: 2</p>
+
+        <footer>
+          <p>
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsyungwirth.bitweb1.nwtc.edu%2Fjavascript%2Ffinal-project%2Ffittext.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">CSS Validation Results</a>
+            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fsyungwirth.bitweb1.nwtc.edu%2Fjavascript%2Ffinal-project%2Ffittext.html">HTML Validation Results</a>
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      window.jQuery || document.write('<script src="jsfiles/plugins/jquery-3.4.1.min.js"><\/script>')
+    </script>
+    <script src="jsfiles/plugins/jquery.fittext.js"></script>
+    <script src="jsfiles/fittext.js"></script>
+    <script src="jsfiles/no-js.js"></script>
+    <script src="jsfiles/log.js"></script>
+  </body>
+</html>

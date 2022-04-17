@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Validation Plugin</title>
+    <link rel="stylesheet" href="styles/validate.css">
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body>
+    <div class="enablejs">Please enable Javascript in order to use this site</div>
+    <nav>
+      <a href="documentation.html">Documentation</a>
+      <a href="validate.html">Validation</a>
+      <a href="fittext.html">FitText</a>
+      <a href="twentytwenty.html">TwentyTwenty</a>
+      <a href="tabs.html">Tabs</a>
+      <a href="json.html">JSON</a>
+      <a href="ajax.html">AJAX</a>
+      <a href="https://syungwirth.bitweb1.nwtc.edu/javascript/final-project/map.html">Map</a>
+    </nav>
+    <div id="content">
+      <main>
+        <h1>Validation Plugin</h1>
+
+        <form novalidate id="form" action="success.html" method="post">
+          <fieldset id="texts">
+            <p><label class="textlabels" for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="ex: Bob"></p>
+            <p><label class="textlabels" for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="ex: Smith"></p>
+            <p><label class="textlabels" for="email">Email Address</label>
+            <input type="text" id="email" name="email" placeholder="ex: BobSmith@email.com"></p>
+            <p><label class="textlabels" for="book">Favorite Book</label>
+            <input type="text" id="book" name="book" placeholder="ex: 20,000 Leagues Under the Sea"></p>
+          </fieldset>
+
+          <fieldset id="radios">
+            <legend>If you could have one of the following, which would it be?</legend>
+            <div id="radiocontainer">
+              <label for="sleep">Never need to sleep</label>
+              <label for="eat">Never need to eat</label>
+              <label for="breathe">Never need to breathe</label>
+              <input type="radio" name="dreamoptions" id="sleep">
+              <input type="radio" name="dreamoptions" id="eat">
+              <input type="radio" name="dreamoptions" id="breathe">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>What's your favorite type of pie?</legend>
+            <select id="pie" name="pie">
+              <option value="">Choose One</option>
+              <option value="apple">Apple</option>
+              <option value="cherry">Cherry</option>
+              <option value="pumpkin">Pumpkin</option>
+              <option value="other">Other</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>What's your favorite food group?</legend>
+            <select id="food" name="food">
+              <option value="">Choose One</option>
+              <option value="grains">Grains</option>
+              <option value="fruit">Fruit</option>
+              <option value="vegetables">Vegetables</option>
+              <option value="dairy">Dairy</option>
+              <option value="meat">Meat</option>
+              <option value="sweets">Sweets</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Select at least two instruments you know, or would like to know, how to play</legend>
+            <div id="instruments">
+              <div class="halfchecks">
+                <p><input type="checkbox" class="instruments" id="inst_piano" name="instruments[]" value="piano">
+                <label for="inst_piano">Piano</label><br>
+                <input type="checkbox" class="instruments" id="inst_guitar" name="instruments[]" value="guitar">
+                <label for="inst_guitar">Guitar</label><br>
+                <input type="checkbox" class="instruments" id="inst_drums" name="instruments[]" value="drums">
+                <label for="inst_drums">Drums</label></p>
+              </div>
+              <div class="halfchecks">
+                <p><input type="checkbox" class="instruments" id="inst_trumpet" name="instruments[]" value="trumpet">
+                <label for="inst_trumpet">Trumpet</label><br>
+                <input type="checkbox" class="instruments" id="inst_flute" name="instruments[]" value="flute">
+                <label for="inst_flute">Flute</label><br>
+                <input type="checkbox" class="instruments" id="inst_violin" name="instruments[]" value="violin">
+                <label for="inst_violin">Violin</label></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Please enter your life story</legend>
+            <textarea name="life" rows="8" cols="80"></textarea>
+          </fieldset>
+
+          <p><input type="submit" name="submit" value="Submit Form"></p>
+        </form>
+        <footer>
+          <p>
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsyungwirth.bitweb1.nwtc.edu%2Fjavascript%2Ffinal-project%2Fvalidate.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">CSS Validation Results</a>
+            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fsyungwirth.bitweb1.nwtc.edu%2Fjavascript%2Ffinal-project%2Fvalidate.html">HTML Validation Results</a>
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script>
+      window.jQuery || document.write('<script src="jsfiles/plugins/jquery-3.4.1.min.js"><\/script>')
+      window.jQuery.fn.validate || document.write('<script src="jsfiles/plugins/jquery.validate.min.js"><\/script>')
+    </script>
+    <script src="jsfiles/validate.js"></script>
+    <script src="jsfiles/no-js.js"></script>
+    <script src="jsfiles/log.js"></script>
+  </body>
+</html>

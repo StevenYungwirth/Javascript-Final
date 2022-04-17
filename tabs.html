@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Tabs</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/tabs.css">
+  </head>
+  <body>
+    <div class="enablejs">Please enable Javascript in order to use this site</div>
+    <nav>
+      <a href="documentation.html">Documentation</a>
+      <a href="validate.html">Validation</a>
+      <a href="fittext.html">FitText</a>
+      <a href="twentytwenty.html">TwentyTwenty</a>
+      <a href="tabs.html">Tabs</a>
+      <a href="json.html">JSON</a>
+      <a href="ajax.html">AJAX</a>
+      <a href="https://syungwirth.bitweb1.nwtc.edu/javascript/final-project/map.html">Map</a>
+    </nav>
+    <div id="content">
+      <main>
+        <h1>Tabs Example</h1>
+
+        <div id="tabs">
+          <ul id="tabList">
+            <li class="activeTab">
+              <a class="tabLink" href="#tab1">Tab One</a>
+            </li>
+            <li>
+              <a class="tabLink" href="#tab2">Tab Two</a>
+            </li>
+            <li>
+              <a class="tabLink" href="#tab3">Tab Three</a>
+            </li>
+          </ul>
+
+          <div class="tabContent activeTab" id="tab1">
+            <p>
+              This is the content of the first tab. Start off with a bang and get people interested in what you have to say.
+              There should be enough here to fill up the container, but I don't think there'll be much more after this.
+            </p>
+          </div>
+          <div class="tabContent" id="tab2">
+            <p>
+              This tab's only reason for existing is to be in the way.
+              If you wanted to go straight from the first tab to the third one, this tab will get in your way every time.
+              Did you hope to read its contents? It's all just filler to tide you over until you're on your way. Not worth it.
+            </p>
+          </div>
+          <div class="tabContent" id="tab3">
+            <p>
+              This is the money-maker. You leave the best content for last and keep the people wanting more. Wasn't that exciting?
+            </p>
+          </div>
+        </div>
+
+        <footer>
+          <p>
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsyungwirth.bitweb1.nwtc.edu%2Fjavascript%2Ffinal-project%2Ftabs.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">CSS Validation Results</a>
+            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fsyungwirth.bitweb1.nwtc.edu%2Fjavascript%2Ffinal-project%2Ftabs.html">HTML Validation Results</a>
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      window.jQuery || document.write('<script src="jsfiles/plugins/jquery-3.4.1.min.js"><\/script>')
+    </script>
+    <script src="jsfiles/tabs.js"></script>
+    <script src="jsfiles/no-js.js"></script>
+    <script src="jsfiles/log.js"></script>
+  </body>
+</html>
